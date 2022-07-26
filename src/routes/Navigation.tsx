@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import logo from '../logo.svg';
 
 export const Navigation = () => {
@@ -9,13 +9,13 @@ export const Navigation = () => {
           <img src={logo} alt="React Logo" />
           <ul>
             <li>
-              <Link to='/'>Home</Link>
+              <NavLink to='/' activeClassName='nav-active' exact>Home</NavLink>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <NavLink to='/about' activeClassName='nav-active' exact>About</NavLink>
             </li>
             <li>
-              <Link to='/users'>Users</Link>
+              <NavLink to='/users' activeClassName='nav-active' exact>Users</NavLink>
             </li>
           </ul>
         </nav>
