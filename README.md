@@ -2,4 +2,4 @@
 
 ## Elis Antonio Perez
 
-Follo me [Instagram](https://www.instagram.com/elisperezmusic).
+Follow me [Instagram](https://www.instagram.com/elisperezmusic).
