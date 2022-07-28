@@ -3,7 +3,8 @@ html,body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background-color: #282c34;
+  background-color: #2d333b;
+  /* background-color: #282c34; */
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,7 +22,7 @@ code {
 }
 
 nav {
-  background-color: #363a45;
+  background-color: #2d333b;
   height: 100vh;
   margin-right: 15px;
   overflow-y: scroll;
