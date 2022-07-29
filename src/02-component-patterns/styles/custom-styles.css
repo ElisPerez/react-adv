@@ -28,3 +28,9 @@
 .active:active {
   color: red;
 }
+
+.shopping-cart {
+  position: fixed;
+  right: 10px;
+  top: 0;
+}
