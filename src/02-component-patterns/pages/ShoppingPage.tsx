@@ -24,6 +24,10 @@ interface ProductInCart extends Product {
 
 export const ShoppingPage = () => {
   const [shoppingCart, setShoppingCart] = useState<{ [key: string]: ProductInCart }>({});
+
+  const onProductCountChange = () => {
+    console.log('onProductCountChange');
+  };
   return (
     <div>
       <h1>ShoppingPage</h1>
@@ -36,7 +40,12 @@ export const ShoppingPage = () => {
         }}
       >
         {products.map(product => (
-          <ProductCard key={product.id} product={product} className='bg-dark text-white'>
+          <ProductCard
+            key={product.id}
+            product={product}
+            className='bg-dark text-white'
+            onChange={() => onProductCountChange()}
+          >
             <ProductImage
               className='custom-image'
               style={{ boxShadow: '10px 10px 10px rgba(0,0,0,0.2)' }}
@@ -47,7 +56,12 @@ export const ShoppingPage = () => {
         ))}
       </div>
       <div className='shopping-cart'>
-        <ProductCard product={product2} className='bg-dark text-white' style={{ width: '100px' }}>
+        <ProductCard
+          className='bg-dark text-white'
+          product={product2}
+          style={{ width: '100px' }}
+          onChange={() => onProductCountChange()}
+        >
           <ProductImage
             className='custom-image'
             style={{ boxShadow: '10px 10px 10px rgba(0,0,0,0.2)' }}
