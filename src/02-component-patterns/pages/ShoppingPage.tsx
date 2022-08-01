@@ -1,60 +1,12 @@
-import { useState } from 'react';
 import { ProductCard, ProductButtons, ProductImage, ProductTitle } from '../components';
-import { Product } from '../interfaces/interfaces';
+import { products } from '../data/products-db';
+import { useShoppingCart } from '../hooks/useShoppingCart';
 
 import '../styles/custom-styles.css';
 
-const product1 = {
-  id: '1',
-  title: 'Coffee Mug',
-  img: './coffee-mug.png',
-};
-
-const product2 = {
-  id: '2',
-  title: 'Coffee Mug - Meme',
-  img: './coffee-mug2.png',
-};
-
-const products: Product[] = [product1, product2];
-
-interface ProductInCart extends Product {
-  count: number;
-}
-
 export const ShoppingPage = () => {
-  const [shoppingCart, setShoppingCart] = useState<{ [key: string]: ProductInCart }>({});
+  const { shoppingCart, onProductCountChange } = useShoppingCart();
 
-  const onProductCountChange = ({ count, product }: { count: number; product: Product }) => {
-    // console.log('onProductCountChange', 'Counter:', count, 'Product:', product);
-    // console.log({count});
-    setShoppingCart(oldShoppingCart => {
-      const productInCart: ProductInCart = oldShoppingCart[product.id] || { ...product, count: 0 };
-
-      if (Math.max(productInCart.count + count, 0) > 0) {
-        productInCart.count += count;
-
-        return {
-          ...oldShoppingCart,
-          [product.id]: productInCart,
-        };
-      }
-
-      // Delete product from cart
-      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-      return rest;
-
-      // if (count === 0) {
-      //   const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-      //   // console.log(toDelete);
-      //   return rest;
-      // }
-      // return {
-      //   ...oldShoppingCart,
-      //   [product.id]: { ...product, count },
-      // };
-    });
-  };
   return (
     <div>
       <h1>ShoppingPage</h1>
