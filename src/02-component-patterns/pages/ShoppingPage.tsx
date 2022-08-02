@@ -20,7 +20,7 @@ export const ShoppingPage = () => {
           maxCount: 10,
         }}
       >
-        {() => (
+        {({ reset }) => (
           <>
             <ProductImage
               className='custom-image'
@@ -28,6 +28,10 @@ export const ShoppingPage = () => {
             />
             <ProductTitle className='text-bold' activeClass='active' />
             <ProductButtons className='custom-buttons' />
+
+            <button onClick={reset}>
+              Reset
+            </button>
           </>
         )}
       </ProductCard>
