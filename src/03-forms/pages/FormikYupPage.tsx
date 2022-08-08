@@ -9,7 +9,7 @@ import '../styles/styles.css';
 // }
 
 export const FormikYupPage = () => {
-  // const {values, handleSubmit, handleChange, handleBlur, errors, touched} = useFormik({
+  // const {values, handleSubmit, handleChange, handleBlur, errors, touched, getFieldProps} = useFormik({
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -34,10 +34,11 @@ export const FormikYupPage = () => {
         <label htmlFor='firstName'>First Name</label>
         <input
           type='text'
-          name='firstName'
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          value={formik.values.firstName}
+          // name='firstName'
+          // onBlur={formik.handleBlur}
+          // onChange={formik.handleChange}
+          // value={formik.values.firstName}
+          {...formik.getFieldProps('firstName')}
         />
 
         {formik.touched.firstName && formik.errors.firstName && (
@@ -47,10 +48,11 @@ export const FormikYupPage = () => {
         <label htmlFor='lastName'>Last Name</label>
         <input
           type='text'
-          name='lastName'
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          value={formik.values.lastName}
+          // name='lastName'
+          // onBlur={formik.handleBlur}
+          // onChange={formik.handleChange}
+          // value={formik.values.lastName}
+          {...formik.getFieldProps('lastName')}
         />
 
         {formik.touched.lastName && formik.errors.lastName && <span>{formik.errors.lastName}</span>}
@@ -58,10 +60,11 @@ export const FormikYupPage = () => {
         <label htmlFor='email'>Email</label>
         <input
           type='email'
-          name='email'
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          value={formik.values.email}
+          // name='email'
+          // onBlur={formik.handleBlur}
+          // onChange={formik.handleChange}
+          // value={formik.values.email}
+          {...formik.getFieldProps('email')}
         />
 
         {formik.touched.email && formik.errors.email && <span>{formik.errors.email}</span>}
