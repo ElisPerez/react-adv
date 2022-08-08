@@ -2,12 +2,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import '../styles/styles.css';
 
-// interface FormValues {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-// }
-
 export const FormikYupPage = () => {
   // const {values, handleSubmit, handleChange, handleBlur, errors, touched, getFieldProps} = useFormik({
   const formik = useFormik({
@@ -32,40 +26,19 @@ export const FormikYupPage = () => {
 
       <form onSubmit={formik.handleSubmit} noValidate>
         <label htmlFor='firstName'>First Name</label>
-        <input
-          type='text'
-          // name='firstName'
-          // onBlur={formik.handleBlur}
-          // onChange={formik.handleChange}
-          // value={formik.values.firstName}
-          {...formik.getFieldProps('firstName')}
-        />
+        <input type='text' {...formik.getFieldProps('firstName')} />
 
         {formik.touched.firstName && formik.errors.firstName && (
           <span>{formik.errors.firstName}</span>
         )}
 
         <label htmlFor='lastName'>Last Name</label>
-        <input
-          type='text'
-          // name='lastName'
-          // onBlur={formik.handleBlur}
-          // onChange={formik.handleChange}
-          // value={formik.values.lastName}
-          {...formik.getFieldProps('lastName')}
-        />
+        <input type='text' {...formik.getFieldProps('lastName')} />
 
         {formik.touched.lastName && formik.errors.lastName && <span>{formik.errors.lastName}</span>}
 
         <label htmlFor='email'>Email</label>
-        <input
-          type='email'
-          // name='email'
-          // onBlur={formik.handleBlur}
-          // onChange={formik.handleChange}
-          // value={formik.values.email}
-          {...formik.getFieldProps('email')}
-        />
+        <input type='email' {...formik.getFieldProps('email')} />
 
         {formik.touched.email && formik.errors.email && <span>{formik.errors.email}</span>}
 
