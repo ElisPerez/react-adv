@@ -1,0 +1,30 @@
+[
+  {
+    "label": "First Name",
+    "name": "firstName",
+    "placeholder": "First Name",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "label": "Last Name",
+    "name": "lastName",
+    "placeholder": "Last Name",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "label": "Email",
+    "name": "email",
+    "placeholder": "john@example.com",
+    "type": "email",
+    "value": ""
+  },
+  {
+    "label": "Password",
+    "name": "password",
+    "placeholder": "Password",
+    "type": "input",
+    "value": ""
+  }
+]
