@@ -26,5 +26,25 @@
     "placeholder": "Password",
     "type": "input",
     "value": ""
+  },
+  {
+    "label": "Favorite Color",
+    "name": "favoriteColor",
+    "options": [
+      {
+        "id": "1",
+        "label": "Red"
+      },
+      {
+        "id": "2",
+        "label": "Green"
+      },
+      {
+        "id": "3",
+        "label": "Blue"
+      }
+    ],
+    "type": "select",
+    "value": ""
   }
 ]
