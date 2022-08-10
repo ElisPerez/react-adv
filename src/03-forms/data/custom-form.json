@@ -4,28 +4,59 @@
     "name": "firstName",
     "placeholder": "First Name",
     "type": "input",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
   },
   {
     "label": "Last Name",
     "name": "lastName",
     "placeholder": "Last Name",
     "type": "input",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
   },
   {
     "label": "Email",
     "name": "email",
     "placeholder": "john@example.com",
     "type": "email",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+    ]
   },
   {
     "label": "Password",
     "name": "password",
     "placeholder": "Password",
     "type": "input",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   },
   {
     "label": "Favorite Color",
@@ -45,6 +76,11 @@
       }
     ],
     "type": "select",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   }
 ]
